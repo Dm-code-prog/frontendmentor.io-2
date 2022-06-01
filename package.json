@@ -1,7 +1,7 @@
 {
   "name": "frondendmentor-2",
   "version": "0.1.0",
-  "homepage": "https://{Dm-code-prog}.github.io/frontendmentor.io-2",
+  "homepage": "https://Dm-code-prog.github.io/frontendmentor.io-2",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
