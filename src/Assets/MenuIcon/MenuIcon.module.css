@@ -1,0 +1,41 @@
+.animate1F{
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    transform: translateY(10px) rotate(45deg);
+}
+.animate2F{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0);
+}
+.animate3F{
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    transform: translateY(-10px) rotate(-45deg);
+}
+.animate1R{
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75 ease-in-out;
+    -o-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
+}
+.animate2R{
+    -webkit-transition: all 0.75s cubic-bezier(.45,1.83,.98,.89);
+    -moz-transition: all 0.75s cubic-bezier(.45,1.83,.98,.89);
+    -o-transition: all 0.75s cubic-bezier(.45,1.83,.98,.89);
+    transition: all 0.75s cubic-bezier(.45,1.83,.98,.89);
+    transition-delay: 0.5s;
+    transform: scale(1);
+}
+.animate3R{
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75s ease-in-out;
+    -o-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
+}

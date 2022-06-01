@@ -5,10 +5,11 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .App {
-  background-color: hsl(0, 0%, 98%);
+
   font-size: 18px;
   font-weight: 500;
   font-family: 'Epilogue', sans-serif;
