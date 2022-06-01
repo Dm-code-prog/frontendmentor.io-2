@@ -9,6 +9,7 @@ import {ReactComponent as IconReminders} from '../Assets/images/icon-reminders.s
 import {ReactComponent as IconPlanning} from '../Assets/images/icon-planning.svg';
 import { MenuIcon } from '../Assets/MenuIcon/MenuIcon';
 import { Context } from '../App';
+import { use100vh } from 'react-div-100vh';
 
 const Header = styled.div`
     display: flex;
@@ -29,6 +30,7 @@ const slideBack = keyframes`
 `
 
 const UL = styled.ul`
+    overflow: auto;
     position: absolute;
     height: 100%;
     top: 75px;
@@ -44,19 +46,11 @@ const UL = styled.ul`
     background-color: hsl(0, 0%, 90%);
     transition: all 1s ease-in-out;
     padding-left: 18px;
+    transition: all 1s ease-in-out;
      & li{
         list-style: none;
         padding: 18px 0 18px 0;
         padding-left: 18px;
-
-        & > ul{
-            display: none;
-        }
-
-        &:hover > ul{
-            display: block;
-            
-        }
     }
 `
 
@@ -71,33 +65,42 @@ const Button = styled.button`
     font-weight: 400;
     font-size: 21px;
     align-self: center;
-    margin-top: 18px;
+    font-size: 16px;
+    margin-top:18px;
+    background: none;
+    font-family: 'Epilogue', sans-serif;
 `
-
 const List = ()=>{
+    const [expanded, setExpanded] = React.useState({1: false, 2:false});
+    const height= use100vh();
     return (
-        <UL>
-            <li>
-                Features {<ArrowDown></ArrowDown>}
-                <ul>
+        <UL height={height}>
+            <li >
+                <p onClick={() => setExpanded({...expanded, 1: !expanded[1]})}>Features {<ArrowDown></ArrowDown>}</p> 
+                { expanded[1]? <ul>
                     <li>{<IconTodo></IconTodo>}   ToDo List</li>
                     <li>{<IconCalendar></IconCalendar>}   Calendar</li>
                     <li>{<IconReminders></IconReminders>}   Reminders</li>
                     <li>{<IconPlanning></IconPlanning>}   Planning</li>
                 </ul>
+: null}
             </li>
+
             <li>
-                Company {<ArrowDown></ArrowDown>}
+
+                <p  onClick={() => setExpanded({...expanded, 2: !expanded[2]})} >Company {<ArrowDown></ArrowDown>}</p>
+                { expanded[2]?
                 <ul>
                     <li>History</li>
                     <li>Our Team</li>
                     <li>Blog</li>
                 </ul>
+    : null}
             </li>
             <li>Careers</li>
             <li>About</li>
             <Button>Login</Button>
-            <Button style={{border: "1.5px solid hsl(0, 0%, 8%)"}}>Register</Button>
+            <Button style={{border: "1.25px solid hsl(0, 0%, 16%)"}}>Register</Button>
         </UL>
 
     )
