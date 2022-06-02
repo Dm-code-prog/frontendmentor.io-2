@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/frontendmentor.io-2/static/css/main.d38c5e50.css",
-    "main.js": "/frontendmentor.io-2/static/js/main.29525b9a.js",
+    "main.css": "/frontendmentor.io-2/static/css/main.807e1c23.css",
+    "main.js": "/frontendmentor.io-2/static/js/main.7a678cef.js",
     "static/media/image-hero-desktop.png": "/frontendmentor.io-2/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/image-hero-mobile.png": "/frontendmentor.io-2/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
     "static/media/client-databiz.svg": "/frontendmentor.io-2/static/media/client-databiz.d1e7955f847e089183caf61eb54feb51.svg",
@@ -16,11 +16,11 @@
     "static/media/icon-todo.svg": "/frontendmentor.io-2/static/media/icon-todo.84eeba8f3b9a1811c1ea3d7420dcfd98.svg",
     "static/media/icon-arrow-down.svg": "/frontendmentor.io-2/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
     "static/media/icon-arrow-up.svg": "/frontendmentor.io-2/static/media/icon-arrow-up.01861a1152dfab5f1070228d306352f4.svg",
-    "main.d38c5e50.css.map": "/frontendmentor.io-2/static/css/main.d38c5e50.css.map",
-    "main.29525b9a.js.map": "/frontendmentor.io-2/static/js/main.29525b9a.js.map"
+    "main.807e1c23.css.map": "/frontendmentor.io-2/static/css/main.807e1c23.css.map",
+    "main.7a678cef.js.map": "/frontendmentor.io-2/static/js/main.7a678cef.js.map"
   },
   "entrypoints": [
-    "static/css/main.d38c5e50.css",
-    "static/js/main.29525b9a.js"
+    "static/css/main.807e1c23.css",
+    "static/js/main.7a678cef.js"
   ]
 }
