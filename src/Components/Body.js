@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 import ImageMobile from '../Assets/images/image-hero-mobile.png';
 import ImageDesktop from '../Assets/images/image-hero-desktop.png';
 
@@ -105,12 +106,26 @@ const BrandContainer = styled.div`
 
 
 function Body(){
-    console.log(window.innerWidth)
+    const ImageHero = document.getElementById('image-hero');
+    window.onresize = () => {
+        if (window.innerWidth > 767) {
+            ImageHero.src = ImageDesktop;
+            ImageHero.style.width = "337.5px";
+            ImageHero.style.height = "450px";
+        } else {
+            ImageHero.src = ImageMobile;
+            ImageHero.style.width = "100%";
+            ImageHero.style.height = "100%";
+        }
+
+    }
     return (
         <>
         <BodyContainer>
             <div style={{marginTop:"10px", display: "flex", justifyContent: "center"}}>
-                <img src={window.innerWidth > 767 ? ImageDesktop:ImageMobile} alt=""
+                <img 
+                    id="image-hero"
+                    src={window.innerWidth > 767 ? ImageDesktop : ImageMobile} alt=""
                     width={window.innerWidth > 767 ? "337.5px":"100%"}
                     height={window.innerWidth > 767 ? "450px":"100%"}
                     style={{maxWidth: "500px"}}

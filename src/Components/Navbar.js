@@ -78,7 +78,7 @@ const UL = styled.ul`
             position: relative;
             padding-left: 5px;
             padding-right: 5px;
-            // flex-shrink: 0;
+
         }
         &  li:hover{
             padding-top: 18px;
@@ -199,10 +199,21 @@ const List = ()=>{
 
 function Navbar(){
     const {MenuOpen, setMenuOpen} = React.useContext(Context);
+    const Menu = document.querySelector("#menu")
+    window.onresize = () => {
+        if (window.innerWidth > 768) {
+            Menu.style.display = "none";
+            console.log("more")
+        } else{
+            Menu.style.display = "block";
+        }
+
+    }
     return (
             <Header>
                 <Logo style={{cursor: "pointer"}}/>
-                {window.innerWidth > 767 ? "": <MenuIcon MenuOpen={MenuOpen} setMenuOpen={setMenuOpen}/>}
+                {window.innerWidth > 767? "": <MenuIcon id="menu" MenuOpen={MenuOpen} setMenuOpen={setMenuOpen}/>}
+    
                 {(MenuOpen || window.innerWidth > 767) && 
                     <List>
                     </List>}
