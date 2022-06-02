@@ -9,7 +9,7 @@ import {ReactComponent as Meet} from '../Assets/images/client-meet.svg';
 
 const BodyContainer = styled.div`
     padding-top: 36px;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-around;
@@ -26,7 +26,7 @@ const P = styled.p`
     text-align: center;
     max-width: 390px;
     margin: auto;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         text-align: left;
         padding: 0;
         margin: 0;
@@ -37,7 +37,7 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         justify-content: flex-start;
         text-align: left;
         max-width: 500px;
@@ -45,7 +45,7 @@ const HeaderContainer = styled.div`
 `
 const H1 = styled.h1`
     padding: 36px 18px 0 18px;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         text-align: left;
         padding: 0;
         padding-top: 36px;
@@ -66,7 +66,7 @@ const BlackButton = styled.button`
     height: 50px;
     font-size: 18px;
     font-weight: 700;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         margin-top: 48px;
         margin-left: 0;
     }
@@ -79,7 +79,7 @@ const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         justify-content: flex-start;
     }
     `
@@ -93,7 +93,7 @@ const BrandContainer = styled.div`
     width: 100%;
     margin-top: 18px;
     margin-bottom: 36px;
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
         margin-top: 48px;
         justify-content: space-between;
     }
@@ -110,9 +110,9 @@ function Body(){
         <>
         <BodyContainer>
             <div style={{marginTop:"10px", display: "flex", justifyContent: "center"}}>
-                <img src={window.innerWidth > 768 ? ImageDesktop:ImageMobile} alt=""
-                    width={window.innerWidth > 768 ? "337.5px":"100%"}
-                    height={window.innerWidth > 768 ? "450px":"100%"}
+                <img src={window.innerWidth > 767 ? ImageDesktop:ImageMobile} alt=""
+                    width={window.innerWidth > 767 ? "337.5px":"100%"}
+                    height={window.innerWidth > 767 ? "450px":"100%"}
                     style={{maxWidth: "500px"}}
                     />
             </div>

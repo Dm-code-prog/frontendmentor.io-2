@@ -10,6 +10,7 @@ import {ReactComponent as IconPlanning} from '../Assets/images/icon-planning.svg
 import { MenuIcon } from '../Assets/MenuIcon/MenuIcon';
 import { Context } from '../App';
 import { use100vh } from 'react-div-100vh';
+import { isSafari } from 'react-device-detect';
 
 const Header = styled.div`
     display: flex;
@@ -36,7 +37,7 @@ const slideBack = keyframes`
 const UL = styled.ul`
     overflow: auto;
     position: absolute;
-    height: 100%;
+    height: ${props => props.height}px;
     top: 75px;
     min-width: 200px;
     right: 0;
@@ -57,7 +58,7 @@ const UL = styled.ul`
     }
     & ul {padding: 0;}
     & ul li: hover{ background-color: rgb(180,223,229);}
-    @media(min-width: 768px){
+    @media(min-width: 767px){
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -150,16 +151,14 @@ const List = ()=>{
     const [expanded, setExpanded] = React.useState({1: false, 2:false});
     const height= use100vh();
     const [See, SetSee] = React.useState(true);
-    window.addEventListener('scroll', () => {SetSee(false)});
+    window.addEventListener('scroll', () => {window.innerWidth > 767 && SetSee(false)});
     return (
-        <UL height={height}>
+        <UL height={height + 75}>
             <li>
                 <p onClick={function (){
                     
                     setExpanded({...expanded, 1: !expanded[1]})
-                    if (window.innerWidth > 768){
                         SetSee(true)
-                        }
                     }
                     }>Features {<ArrowDown></ArrowDown>}</p> 
                 { expanded[1]? 
@@ -177,9 +176,8 @@ const List = ()=>{
 
                 <p  onClick={()=>{ 
                     setExpanded({...expanded, 2: !expanded[2]})
-                    if (window.innerWidth > 768){
+                
                     SetSee(true)
-                    }
                 }}
                 >Company {<ArrowDown></ArrowDown>}</p>
                 { expanded[2]?
@@ -204,8 +202,8 @@ function Navbar(){
     return (
             <Header>
                 <Logo style={{cursor: "pointer"}}/>
-                {window.innerWidth > 768 ? "": <MenuIcon MenuOpen={MenuOpen} setMenuOpen={setMenuOpen}/>}
-                {(MenuOpen || window.innerWidth > 768) && 
+                {window.innerWidth > 767 ? "": <MenuIcon MenuOpen={MenuOpen} setMenuOpen={setMenuOpen}/>}
+                {(MenuOpen || window.innerWidth > 767) && 
                     <List>
                     </List>}
             </Header>
